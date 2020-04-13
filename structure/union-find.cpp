@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 struct UnionFind {
     vector<int> data;
     UnionFind(int size){
