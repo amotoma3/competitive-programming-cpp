@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: structure/union-find.cpp
+# :x: structure/union-find.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#07414f4e15ca943e6cde032dec85d92f">structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/structure/union-find.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-14 00:42:00+09:00
+    - Last commit date: 2020-04-14 00:59:14+09:00
 
 
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/test/union-find.test.cpp.html">test/union-find.test.cpp</a>
+* :x: <a href="../../verify/test/union-find.test.cpp.html">test/union-find.test.cpp</a>
 
 
 ## Code
@@ -46,9 +46,6 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#include<bits/stdc++.h>
-using namespace std;
-
 struct UnionFind {
     vector<int> data;
     UnionFind(int size){
@@ -80,9 +77,6 @@ struct UnionFind {
 {% raw %}
 ```cpp
 #line 1 "structure/union-find.cpp"
-#include<bits/stdc++.h>
-using namespace std;
-
 struct UnionFind {
     vector<int> data;
     UnionFind(int size){

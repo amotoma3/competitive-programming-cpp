@@ -38,12 +38,12 @@ layout: default
 
 ### structure
 
-* :heavy_check_mark: <a href="library/structure/union-find.cpp.html">structure/union-find.cpp</a>
+* :x: <a href="library/structure/union-find.cpp.html">structure/union-find.cpp</a>
 
 
 ## Verify Files
 
 * :heavy_check_mark: <a href="verify/example.test.cpp.html">example.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/union-find.test.cpp.html">test/union-find.test.cpp</a>
+* :x: <a href="verify/test/union-find.test.cpp.html">test/union-find.test.cpp</a>
 
 
