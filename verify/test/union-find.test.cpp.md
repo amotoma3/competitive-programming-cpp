@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/union-find.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-14 01:22:34+09:00
+    - Last commit date: 2020-04-14 02:33:03+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/structure/union-find.cpp.html">structure/union-find.cpp</a>
+* :heavy_check_mark: <a href="../../library/structure/union-find.hpp.html">structure/union-find.hpp</a>
 
 
 ## Code
@@ -48,8 +48,10 @@ layout: default
 {% raw %}
 ```cpp
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
+#include<bits/stdc++.h>
+using namespace std;
 
-#include "../structure/union-find.cpp"
+#include "../structure/union-find.hpp"
 
 int main() {
   int N, Q;
@@ -71,14 +73,10 @@ int main() {
 ```cpp
 #line 1 "test/union-find.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
-
-#line 2 "structure/union-find.cpp"
-
-#ifndef call_from_test
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-#endif
 
+#line 1 "structure/union-find.hpp"
 struct UnionFind {
     vector<int> data;
     UnionFind(int size){
@@ -101,7 +99,7 @@ struct UnionFind {
         return (-data[find(k)]);
     }
 };
-#line 4 "test/union-find.test.cpp"
+#line 6 "test/union-find.test.cpp"
 
 int main() {
   int N, Q;

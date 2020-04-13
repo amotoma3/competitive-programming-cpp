@@ -38,7 +38,7 @@ layout: default
 
 ### structure
 
-* :heavy_check_mark: <a href="library/structure/union-find.cpp.html">structure/union-find.cpp</a>
+* :heavy_check_mark: <a href="library/structure/union-find.hpp.html">structure/union-find.hpp</a>
 
 
 ## Verify Files
