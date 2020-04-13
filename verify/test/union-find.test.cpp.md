@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/union-find.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-14 02:33:03+09:00
+    - Last commit date: 2020-04-14 03:16:06+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A</a>
@@ -78,25 +78,28 @@ using namespace std;
 
 #line 1 "structure/union-find.hpp"
 struct UnionFind {
-    vector<int> data;
-    UnionFind(int size){
-        data.assign(size,-1);
+    vector<int> par;
+
+    UnionFind(int sz){
+        par.assign(sz+1,-1);
     }
+
     bool unite(int x,int y){
-        x=find(x);
-        y=find(y);
+        x=find(x),y=find(y);
         if(x==y)return false;
-        if(data[x]>data[y])swap(x,y);
-        data[x]+=data[y];
-        data[y]=x;
+        if(par[x]>par[y])swap(x,y);
+        par[x]+=par[y];
+        par[y]=x;
         return true;
     }
-    int find(int k){
-        if(data[k]<0)return k;
-        return (data[k]=find(data[k]));
+
+    int find(int x){
+        if(par[x]<0)return x;
+        return par[x]=find(par[x]);
     }
-    int size(int k){
-        return (-data[find(k)]);
+
+    int size(int x){
+        return -par[find(x)];
     }
 };
 #line 6 "test/union-find.test.cpp"
