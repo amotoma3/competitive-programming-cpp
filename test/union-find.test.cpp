@@ -1,6 +1,8 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
+#include<bits/stdc++.h>
+using namespace std;
 
-#include "../structure/union-find.cpp"
+#include "../structure/union-find.hpp"
 
 int main() {
   int N, Q;

@@ -1,10 +1,3 @@
-#pragma once
-
-#ifndef call_from_test
-#include <bits/stdc++.h>
-using namespace std;
-#endif
-
 struct UnionFind {
     vector<int> data;
     UnionFind(int size){
