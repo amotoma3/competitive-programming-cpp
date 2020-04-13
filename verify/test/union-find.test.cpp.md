@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: test/union-find.test.cpp
+# :heavy_check_mark: test/union-find.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/union-find.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-14 00:59:14+09:00
+    - Last commit date: 2020-04-14 01:22:34+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :x: <a href="../../library/structure/union-find.cpp.html">structure/union-find.cpp</a>
+* :heavy_check_mark: <a href="../../library/structure/union-find.cpp.html">structure/union-find.cpp</a>
 
 
 ## Code
@@ -72,7 +72,13 @@ int main() {
 #line 1 "test/union-find.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
 
-#line 1 "structure/union-find.cpp"
+#line 2 "structure/union-find.cpp"
+
+#ifndef call_from_test
+#include <bits/stdc++.h>
+using namespace std;
+#endif
+
 struct UnionFind {
     vector<int> data;
     UnionFind(int size){
@@ -95,7 +101,6 @@ struct UnionFind {
         return (-data[find(k)]);
     }
 };
-
 #line 4 "test/union-find.test.cpp"
 
 int main() {
