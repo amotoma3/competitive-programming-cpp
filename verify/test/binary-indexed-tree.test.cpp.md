@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: test/binary-indexed-tree.test.cpp
+# :heavy_check_mark: test/binary-indexed-tree.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/binary-indexed-tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-18 10:32:14+09:00
+    - Last commit date: 2020-04-18 10:35:17+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B</a>
@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :x: <a href="../../library/structure/binary-indexed-tree.hpp.html">structure/binary-indexed-tree.hpp</a>
-* :x: <a href="../../library/template/template.hpp.html">template/template.hpp</a>
+* :heavy_check_mark: <a href="../../library/structure/binary-indexed-tree.hpp.html">structure/binary-indexed-tree.hpp</a>
+* :heavy_check_mark: <a href="../../library/template/template.hpp.html">template/template.hpp</a>
 
 
 ## Code
@@ -60,7 +60,8 @@ int main() {
   while(Q--) {
     int T, X, Y;
     cin >> T >> X >> Y;
-    cout << bit.sum(X-1,Y-1) << "\n";
+    if(T)cout << bit.sum(X-1,Y-1) << "\n";
+    else bit.add(X-1,Y);
   }
 }
 
@@ -168,7 +169,8 @@ int main() {
   while(Q--) {
     int T, X, Y;
     cin >> T >> X >> Y;
-    cout << bit.sum(X-1,Y-1) << "\n";
+    if(T)cout << bit.sum(X-1,Y-1) << "\n";
+    else bit.add(X-1,Y);
   }
 }
 

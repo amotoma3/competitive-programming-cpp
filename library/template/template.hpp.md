@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: template/template.hpp
+# :heavy_check_mark: template/template.hpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -38,12 +38,12 @@ layout: default
 
 ## Required by
 
-* :x: <a href="../structure/binary-indexed-tree.hpp.html">structure/binary-indexed-tree.hpp</a>
+* :heavy_check_mark: <a href="../structure/binary-indexed-tree.hpp.html">structure/binary-indexed-tree.hpp</a>
 
 
 ## Verified with
 
-* :x: <a href="../../verify/test/binary-indexed-tree.test.cpp.html">test/binary-indexed-tree.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/binary-indexed-tree.test.cpp.html">test/binary-indexed-tree.test.cpp</a>
 
 
 ## Code
