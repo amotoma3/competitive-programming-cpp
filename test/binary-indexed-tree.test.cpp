@@ -10,6 +10,7 @@ int main() {
   while(Q--) {
     int T, X, Y;
     cin >> T >> X >> Y;
-    cout << bit.sum(X-1,Y-1) << "\n";
+    if(T)cout << bit.sum(X-1,Y-1) << "\n";
+    else bit.add(X-1,Y);
   }
 }
