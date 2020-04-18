@@ -38,12 +38,21 @@ layout: default
 
 ### structure
 
+* :x: <a href="library/structure/binary-indexed-tree.hpp.html">structure/binary-indexed-tree.hpp</a>
 * :heavy_check_mark: <a href="library/structure/union-find.hpp.html">structure/union-find.hpp</a>
+
+
+<div id="66f6181bcb4cff4cd38fbc804a036db6"></div>
+
+### template
+
+* :x: <a href="library/template/template.hpp.html">template/template.hpp</a>
 
 
 ## Verify Files
 
 * :heavy_check_mark: <a href="verify/example.test.cpp.html">example.test.cpp</a>
+* :x: <a href="verify/test/binary-indexed-tree.test.cpp.html">test/binary-indexed-tree.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/union-find.test.cpp.html">test/union-find.test.cpp</a>
 
 
