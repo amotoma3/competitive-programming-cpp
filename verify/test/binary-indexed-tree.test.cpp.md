@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/binary-indexed-tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-18 10:27:14+09:00
+    - Last commit date: 2020-04-18 10:32:14+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B</a>
@@ -49,9 +49,8 @@ layout: default
 {% raw %}
 ```cpp
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
-
+#define ONLINE_JUDGE
 #include "../template/template.hpp"
-
 #include "../structure/binary-indexed-tree.hpp"
 
 int main() {
@@ -73,7 +72,7 @@ int main() {
 ```cpp
 #line 1 "test/binary-indexed-tree.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
-
+#define ONLINE_JUDGE
 #line 1 "template/template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
@@ -103,8 +102,6 @@ template<class T>
 bool chmin(T &a,const T &b){if(b<a){a=b;return 1;}return 0;}
 template<class T>
 using pq=priority_queue<T,vector<T>,greater<T>>;
-#line 4 "test/binary-indexed-tree.test.cpp"
-
 #line 1 "structure/binary-indexed-tree.hpp"
 
 #line 2 "template/template.hpp"
@@ -162,7 +159,7 @@ struct BinaryIndexedTree {
         return sum(to)-sum(from-1);
     }
 };
-#line 6 "test/binary-indexed-tree.test.cpp"
+#line 5 "test/binary-indexed-tree.test.cpp"
 
 int main() {
   int N, Q;
