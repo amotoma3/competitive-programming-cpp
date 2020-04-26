@@ -41,7 +41,7 @@ private:
 
         bg.resize(id);
         ms.resize(id);
-        for(i,g.size()){
+        rep(i,g.size()){
             for(auto &to:g[i]){
                 if(gid[i]!=gid[to])bg[gid[i]].push_back(gid[to]);
             }
