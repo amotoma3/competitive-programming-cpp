@@ -34,6 +34,13 @@ layout: default
 
 ## Library Files
 
+<div id="7e676e9e663beb40fd133f5ee24487c2"></div>
+
+### math
+
+* :warning: <a href="library/math/baby-step-giant-step.hpp.html">math/baby-step-giant-step.hpp</a>
+
+
 <div id="07414f4e15ca943e6cde032dec85d92f"></div>
 
 ### structure
