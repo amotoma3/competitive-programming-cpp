@@ -1,8 +1,7 @@
 #ifndef ONLINE_JUDGE
 #include "../template/template.hpp"
-#endif
-
 #include "../math/mint.hpp"
+#endif
 
 struct Combination{
     vector<mint> f,rev;
