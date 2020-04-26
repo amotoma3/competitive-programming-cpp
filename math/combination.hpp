@@ -13,5 +13,5 @@ struct Combination{
     }
     mint p(int n,int k){return k<0||n<k?0:f[n]*rev[n-k];}
     mint c(int n,int k){return k<0||n<k?0:f[n]*rev[n-k]*rev[k];}
-    mint h(int n,int r){return n<0||r<0?0:c(n+r-1,r);}
+    mint h(int n,int r){return n<0||r<0?0:(!r?1:c(n+r-1,r));}
 };
