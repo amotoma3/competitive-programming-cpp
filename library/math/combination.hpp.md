@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#7e676e9e663beb40fd133f5ee24487c2">math</a>
 * <a href="{{ site.github.repository_url }}/blob/master/math/combination.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-26 14:22:54+09:00
+    - Last commit date: 2020-04-26 14:53:21+09:00
 
 
 
@@ -62,7 +62,7 @@ struct Combination{
     }
     mint p(int n,int k){return k<0||n<k?0:f[n]*rev[n-k];}
     mint c(int n,int k){return k<0||n<k?0:f[n]*rev[n-k]*rev[k];}
-    mint h(int n,int r){return n<0||r<0?0:c(n+r-1,r);}
+    mint h(int n,int r){return n<0||r<0?0:(!r?1:c(n+r-1,r));}
 };
 ```
 {% endraw %}
