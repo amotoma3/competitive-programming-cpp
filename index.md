@@ -38,7 +38,7 @@ layout: default
 
 ### graph
 
-* :x: <a href="library/graph/strongly-connected-components.hpp.html">graph/strongly-connected-components.hpp</a>
+* :heavy_check_mark: <a href="library/graph/strongly-connected-components.hpp.html">graph/strongly-connected-components.hpp</a>
 
 
 <div id="7e676e9e663beb40fd133f5ee24487c2"></div>
@@ -62,15 +62,15 @@ layout: default
 
 ### template
 
-* :x: <a href="library/template/graph-template.hpp.html">template/graph-template.hpp</a>
-* :question: <a href="library/template/template.hpp.html">template/template.hpp</a>
+* :heavy_check_mark: <a href="library/template/graph-template.hpp.html">template/graph-template.hpp</a>
+* :heavy_check_mark: <a href="library/template/template.hpp.html">template/template.hpp</a>
 
 
 ## Verify Files
 
 * :heavy_check_mark: <a href="verify/example.test.cpp.html">example.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/binary-indexed-tree.test.cpp.html">test/binary-indexed-tree.test.cpp</a>
-* :x: <a href="verify/test/strongly-connected-components.test.cpp.html">test/strongly-connected-components.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/strongly-connected-components.test.cpp.html">test/strongly-connected-components.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/union-find.test.cpp.html">test/union-find.test.cpp</a>
 
 
