@@ -39,6 +39,7 @@ layout: default
 ### math
 
 * :warning: <a href="library/math/baby-step-giant-step.hpp.html">math/baby-step-giant-step.hpp</a>
+* :warning: <a href="library/math/combination.hpp.html">math/combination.hpp</a>
 * :warning: <a href="library/math/mint.hpp.html">math/mint.hpp</a>
 
 

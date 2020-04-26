@@ -39,6 +39,7 @@ layout: default
 ## Required by
 
 * :warning: <a href="../math/baby-step-giant-step.hpp.html">math/baby-step-giant-step.hpp</a>
+* :warning: <a href="../math/combination.hpp.html">math/combination.hpp</a>
 * :warning: <a href="../math/mint.hpp.html">math/mint.hpp</a>
 * :heavy_check_mark: <a href="../structure/binary-indexed-tree.hpp.html">structure/binary-indexed-tree.hpp</a>
 
