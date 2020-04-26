@@ -25,21 +25,26 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: math/combination.hpp
+# :x: graph/strongly-connected-components.hpp
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#7e676e9e663beb40fd133f5ee24487c2">math</a>
-* <a href="{{ site.github.repository_url }}/blob/master/math/combination.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-26 14:53:21+09:00
+* category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
+* <a href="{{ site.github.repository_url }}/blob/master/graph/strongly-connected-components.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-04-26 18:06:28+09:00
 
 
 
 
 ## Depends on
 
-* :warning: <a href="mint.hpp.html">math/mint.hpp</a>
+* :x: <a href="../template/graph-template.hpp.html">template/graph-template.hpp</a>
 * :question: <a href="../template/template.hpp.html">template/template.hpp</a>
+
+
+## Verified with
+
+* :x: <a href="../../verify/test/strongly-connected-components.test.cpp.html">test/strongly-connected-components.test.cpp</a>
 
 
 ## Code
@@ -49,20 +54,54 @@ layout: default
 ```cpp
 #ifndef ONLINE_JUDGE
 #include "../template/template.hpp"
-#include "../math/mint.hpp"
+#include "../template/graph-template.hpp"
 #endif
 
-struct Combination{
-    vector<mint> f,rev;
-    Combination(int n):f(n+1),rev(n+1){
-        f[0]=1;
-        repe(i,1,n)f[i]=f[i-1]*i;
-        rev[n]=mint(1)/f[n];
-        rrep(i,n)rev[i]=rev[i+1]*(i+1);
+template<typename G>
+struct StronglyConnectedComponents{
+    const G &g;
+    vvl gg,rg,bg,ms;
+    vl gid,ord;
+    vector<bool> used;
+
+    StronglyConnectedComponents(G &g):g(g),gg(g.size()),rg(g.size()),gid(g.size(),-1),used(g.size()){
+        rep(i,g.size())for(auto &to:g[i]){
+            gg[i].push_back(to);
+            rg[to].push_back(i);
+        }
+        build();
     }
-    mint p(int n,int k){return k<0||n<k?0:f[n]*rev[n-k];}
-    mint c(int n,int k){return k<0||n<k?0:f[n]*rev[n-k]*rev[k];}
-    mint h(int n,int r){return n<0||r<0?0:(!r?1:c(n+r-1,r));}
+    int operator[](int k){return gid[k];}
+    vvl get_graph(){return bg;}
+    vl get_members(int id){return ms[id];}
+
+private:
+    void dfs(int x){
+        if(used[x])return;
+        used[x]=true;
+        for(ll to:gg[x])dfs(to);
+        ord.push_back(x);
+    }
+    void rdfs(int x,int id){
+        if(gid[x]!=-1)return;
+        gid[x]=id;
+        for(ll to:rg[x])rdfs(to,id);
+    }
+    void build(){
+        rep(i,gg.size())dfs(i);
+        reverse(all(ord));
+        int id=0;
+        for(int i:ord)if(gid[i]==-1)rdfs(i,id),++id;
+
+        bg.resize(id);
+        ms.resize(id);
+        for(i,g.size()){
+            for(auto &to:g[i]){
+                if(gid[i]!=gid[to])bg[gid[i]].push_back(gid[to]);
+            }
+            ms[gid[i]].push_back(i);
+        }
+    }
 };
 ```
 {% endraw %}
@@ -77,7 +116,7 @@ Traceback (most recent call last):
     bundler.update(path)
   File "/opt/hostedtoolcache/Python/3.8.2/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py", line 281, in update
     raise BundleError(path, i + 1, "unable to process #include in #if / #ifdef / #ifndef other than include guards")
-onlinejudge_verify.languages.cplusplus_bundle.BundleError: math/combination.hpp: line 3: unable to process #include in #if / #ifdef / #ifndef other than include guards
+onlinejudge_verify.languages.cplusplus_bundle.BundleError: graph/strongly-connected-components.hpp: line 3: unable to process #include in #if / #ifdef / #ifndef other than include guards
 
 ```
 {% endraw %}

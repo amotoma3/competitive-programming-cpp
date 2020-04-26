@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../template/template.hpp.html">template/template.hpp</a>
+* :question: <a href="../template/template.hpp.html">template/template.hpp</a>
 
 
 ## Verified with
