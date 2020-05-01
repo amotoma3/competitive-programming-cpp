@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#7e676e9e663beb40fd133f5ee24487c2">math</a>
 * <a href="{{ site.github.repository_url }}/blob/master/math/mint.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-26 13:41:02+09:00
+    - Last commit date: 2020-05-01 16:46:09+09:00
 
 
 
@@ -55,36 +55,37 @@ layout: default
 #include "../template/template.hpp"
 #endif
 
-struct mint{
-    static int m;
+template<int m>
+struct MInt{
+    //static int m;
 
     ll x;
-    mint(ll x=0):x((x%m+m)%m){}
+    MInt(ll x=0):x((x%m+m)%m){}
 
-    mint operator-()const{return mint(-x);}
-    mint operator+(const mint &p)const{return mint(*this)+=p;}
-    mint operator-(const mint &p)const{return mint(*this)-=p;}
-    mint operator*(const mint &p)const{return mint(*this)*=p;}
-    mint operator/(const mint &p)const{return mint(*this)/=p;}
+    MInt operator-()const{return MInt(-x);}
+    MInt operator+(const MInt &p)const{return MInt(*this)+=p;}
+    MInt operator-(const MInt &p)const{return MInt(*this)-=p;}
+    MInt operator*(const MInt &p)const{return MInt(*this)*=p;}
+    MInt operator/(const MInt &p)const{return MInt(*this)/=p;}
 
-    mint &operator+=(const mint &p){
+    MInt &operator+=(const MInt &p){
         if((x+=p.x)>=m)x-=m;
         return *this;
     }
-    mint &operator-=(const mint &p){
+    MInt &operator-=(const MInt &p){
         if((x+=m-p.x)>=m)x-=m;
         return *this;
     }
-    mint &operator*=(const mint &p){
+    MInt &operator*=(const MInt &p){
         (x*=p.x)%=m;
         return *this;
     }
-    mint &operator/=(const mint &p){
+    MInt &operator/=(const MInt &p){
         return *this*=p.inv();
     }
 
-    mint pow(ll n)const{
-        mint ret(1),mul(x);
+    MInt pow(ll n)const{
+        MInt ret(1),mul(x);
         while(n){
             if(n&1)ret*=mul;
             mul*=mul;
@@ -92,7 +93,7 @@ struct mint{
         }
         return ret;
     }
-    mint inv()const{
+    MInt inv()const{
         //return pow(m-2);
         int a=x,b=m,u=1,v=0,t;
         while(b){
@@ -100,12 +101,13 @@ struct mint{
             swap(a-=t*b,b);
             swap(u-=t*v,v);
         }
-        return mint(u);
+        return MInt(u);
     }
 
-    friend ostream& operator<<(ostream& os,const mint& a) {return os<<a.x;}
+    friend ostream& operator<<(ostream& os,const MInt& a) {return os<<a.x;}
 };
-int mint::m=mod;
+//int MInt::m=0;
+using mint=MInt<mod>;
 ```
 {% endraw %}
 
@@ -146,36 +148,37 @@ using pq=priority_queue<T,vector<T>,greater<T>>;
 #line 3 "math/mint.hpp"
 #endif
 
-struct mint{
-    static int m;
+template<int m>
+struct MInt{
+    //static int m;
 
     ll x;
-    mint(ll x=0):x((x%m+m)%m){}
+    MInt(ll x=0):x((x%m+m)%m){}
 
-    mint operator-()const{return mint(-x);}
-    mint operator+(const mint &p)const{return mint(*this)+=p;}
-    mint operator-(const mint &p)const{return mint(*this)-=p;}
-    mint operator*(const mint &p)const{return mint(*this)*=p;}
-    mint operator/(const mint &p)const{return mint(*this)/=p;}
+    MInt operator-()const{return MInt(-x);}
+    MInt operator+(const MInt &p)const{return MInt(*this)+=p;}
+    MInt operator-(const MInt &p)const{return MInt(*this)-=p;}
+    MInt operator*(const MInt &p)const{return MInt(*this)*=p;}
+    MInt operator/(const MInt &p)const{return MInt(*this)/=p;}
 
-    mint &operator+=(const mint &p){
+    MInt &operator+=(const MInt &p){
         if((x+=p.x)>=m)x-=m;
         return *this;
     }
-    mint &operator-=(const mint &p){
+    MInt &operator-=(const MInt &p){
         if((x+=m-p.x)>=m)x-=m;
         return *this;
     }
-    mint &operator*=(const mint &p){
+    MInt &operator*=(const MInt &p){
         (x*=p.x)%=m;
         return *this;
     }
-    mint &operator/=(const mint &p){
+    MInt &operator/=(const MInt &p){
         return *this*=p.inv();
     }
 
-    mint pow(ll n)const{
-        mint ret(1),mul(x);
+    MInt pow(ll n)const{
+        MInt ret(1),mul(x);
         while(n){
             if(n&1)ret*=mul;
             mul*=mul;
@@ -183,7 +186,7 @@ struct mint{
         }
         return ret;
     }
-    mint inv()const{
+    MInt inv()const{
         //return pow(m-2);
         int a=x,b=m,u=1,v=0,t;
         while(b){
@@ -191,12 +194,13 @@ struct mint{
             swap(a-=t*b,b);
             swap(u-=t*v,v);
         }
-        return mint(u);
+        return MInt(u);
     }
 
-    friend ostream& operator<<(ostream& os,const mint& a) {return os<<a.x;}
+    friend ostream& operator<<(ostream& os,const MInt& a) {return os<<a.x;}
 };
-int mint::m=mod;
+//int MInt::m=0;
+using mint=MInt<mod>;
 
 ```
 {% endraw %}
