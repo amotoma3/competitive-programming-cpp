@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/binary-indexed-tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-18 10:35:17+09:00
+    - Last commit date: 2020-05-04 11:26:28+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B</a>
@@ -49,7 +49,7 @@ layout: default
 {% raw %}
 ```cpp
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
-#define ONLINE_JUDGE
+#define TEMPLATE_USED
 #include "../template/template.hpp"
 #include "../structure/binary-indexed-tree.hpp"
 
@@ -73,7 +73,7 @@ int main() {
 ```cpp
 #line 1 "test/binary-indexed-tree.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
-#define ONLINE_JUDGE
+#define TEMPLATE_USED
 #line 1 "template/template.hpp"
 #include <bits/stdc++.h>
 using namespace std;

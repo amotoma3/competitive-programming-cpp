@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/strongly-connected-components.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-26 18:10:23+09:00
+    - Last commit date: 2020-05-04 11:26:28+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C</a>
@@ -50,7 +50,7 @@ layout: default
 {% raw %}
 ```cpp
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C"
-#define ONLINE_JUDGE
+#define TEMPLATE_USED
 #include "../template/template.hpp"
 #include "../template/graph-template.hpp"
 #include "../graph/strongly-connected-components.hpp"

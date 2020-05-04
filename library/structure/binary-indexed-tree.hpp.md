@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#07414f4e15ca943e6cde032dec85d92f">structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/structure/binary-indexed-tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-18 10:27:14+09:00
+    - Last commit date: 2020-05-04 11:26:28+09:00
 
 
 
@@ -51,7 +51,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#ifndef ONLINE_JUDGE
+#ifndef TEMPLATE_USED
 #include "../template/template.hpp"
 #endif
 
