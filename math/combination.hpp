@@ -1,4 +1,4 @@
-#ifndef ONLINE_JUDGE
+#ifndef TEMPLATE_USED
 #include "../template/template.hpp"
 #include "../math/mint.hpp"
 #endif

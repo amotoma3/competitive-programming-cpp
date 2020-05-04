@@ -1,5 +1,5 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C"
-#define ONLINE_JUDGE
+#define TEMPLATE_USED
 #include "../template/template.hpp"
 #include "../template/graph-template.hpp"
 #include "../graph/strongly-connected-components.hpp"
