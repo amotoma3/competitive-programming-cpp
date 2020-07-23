@@ -10,7 +10,7 @@ struct BinaryIndexedTree {
         data.assign(sz,0);
     }
 
-    void add(int x,int val){
+    void add(int x,ll val){
         while(x<sz)data[x]+=val,x|=x+1;
     }
 
