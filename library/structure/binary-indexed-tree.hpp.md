@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#07414f4e15ca943e6cde032dec85d92f">structure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/structure/binary-indexed-tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-04 11:26:28+09:00
+    - Last commit date: 2020-07-23 11:42:43+09:00
 
 
 
@@ -63,7 +63,7 @@ struct BinaryIndexedTree {
         data.assign(sz,0);
     }
 
-    void add(int x,int val){
+    void add(int x,ll val){
         while(x<sz)data[x]+=val,x|=x+1;
     }
 
@@ -127,7 +127,7 @@ struct BinaryIndexedTree {
         data.assign(sz,0);
     }
 
-    void add(int x,int val){
+    void add(int x,ll val){
         while(x<sz)data[x]+=val,x|=x+1;
     }
 

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/binary-indexed-tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-04 11:26:28+09:00
+    - Last commit date: 2020-07-23 11:42:43+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B</a>
@@ -144,7 +144,7 @@ struct BinaryIndexedTree {
         data.assign(sz,0);
     }
 
-    void add(int x,int val){
+    void add(int x,ll val){
         while(x<sz)data[x]+=val,x|=x+1;
     }
 
